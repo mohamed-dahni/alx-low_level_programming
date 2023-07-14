@@ -5,7 +5,7 @@
 /**
  * main - Entry point
  * Description: print if the number is greater than 5, zero or less than 6
- * Returen: 0 (success)
+ * Return: 0 (success)
  */
 int main(void)
 {
