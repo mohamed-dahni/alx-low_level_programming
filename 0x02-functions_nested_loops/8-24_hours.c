@@ -33,16 +33,16 @@ void jack_bauer(void)
 	{
 		for (m = 0; m < 60; m++)
 		{
-			// hours
+			/* hours */
 			print_num(h);
 			
-			// colon
+			/* colon */
 			_putchar(':');
 
-			// minuts
+			/* minuts */
 			print_num(m);	
 			
-			// newline
+			/* newline */
 			_putchar('\n');
 		}
 	}
