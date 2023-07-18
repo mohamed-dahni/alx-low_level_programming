@@ -27,7 +27,7 @@ void print_num(int n)
  */
 void jack_bauer(void)
 {
-	int h, m, first_num_h, second_num_h, first_num_m, second_num_m;
+	int h, m;;
 
 	for (h = 0; h < 24; h++)
 	{
