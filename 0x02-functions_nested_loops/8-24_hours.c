@@ -27,7 +27,7 @@ void print_num(int n)
  */
 void jack_bauer(void)
 {
-	int h, m;;
+	int h, m;
 
 	for (h = 0; h < 24; h++)
 	{
@@ -35,13 +35,13 @@ void jack_bauer(void)
 		{
 			/* hours */
 			print_num(h);
-			
+
 			/* colon */
 			_putchar(':');
 
 			/* minuts */
-			print_num(m);	
-			
+			print_num(m);
+
 			/* newline */
 			_putchar('\n');
 		}
