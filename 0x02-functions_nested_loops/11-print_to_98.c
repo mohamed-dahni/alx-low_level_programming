@@ -6,8 +6,9 @@
  */
 void print_to_98(int n)
 {
+	int i;
 	printf("%d, ", n);
-	for (int i = 0; i < 98; i++)
+	for (i = 0; i < 98; i++)
 	{
 		printf("%d, ", i);
 	}
