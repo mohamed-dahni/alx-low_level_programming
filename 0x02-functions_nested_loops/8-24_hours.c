@@ -12,7 +12,7 @@ void print_num(int n)
 	if (n > 9)
 	{
 		last_digit = n % 10;
-		first_digit = (n - last_digit) / 10;
+		first_digit = n / 10;
 	} else
 	{
 		last_digit = n;
