@@ -9,7 +9,7 @@ void print_num(int n)
 	int last_digit = 0;
 	int first_digit = 0;
 
-	if (n > 10)
+	if (n > 9)
 	{
 		last_digit = n % 10;
 		first_digit = (n - last_digit) / 10;
@@ -46,9 +46,4 @@ void jack_bauer(void)
 			_putchar('\n');
 		}
 	}
-}
-
-int main() {
-	jack_bauer();
-	return 0;
 }
