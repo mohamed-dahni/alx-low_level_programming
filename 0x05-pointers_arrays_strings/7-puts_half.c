@@ -27,7 +27,7 @@ void puts_half(char *str)
 {
 	int str_length = _strlen(str);
 	int str_half = str_length / 2;
-	int i = (str_length % 2 == 0) ? (str_half + 1) : (str_half + 2);
+	int i = (str_length % 2 == 0) ? (str_half) : (str_half + 1);
 
 	while (i < str_length)
 	{
