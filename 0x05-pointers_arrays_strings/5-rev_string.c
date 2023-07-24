@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * swap - swaps two characters
+ * @a: first character
+ * @b: second character
+ * Return: void
+ */
 void swap(char *a, char *b)
 {
 	char tmp = *a;
@@ -7,11 +13,16 @@ void swap(char *a, char *b)
 	*b = tmp;
 }
 
+/**
+ * _strlen - returns the length of a string
+ * @s: string to be evaluated
+ * Return: length of string
+ */
 int _strlen(char *s)
 {
 	int length = 0;
 
-	while(*s)
+	while (*s)
 	{
 		length++;
 		s++;
@@ -20,12 +31,19 @@ int _strlen(char *s)
 	return (length);
 }
 
+/**
+ * rev_string - reverses a string
+ * @s: string to be reversed
+ * Return: void
+ */
 void rev_string(char *s)
 {
-	int s_length = _strlen(s), i;
+	int length = _strlen(s);
+	int i = 0;
 
-	for (i = 0; i < s_length/2; i++)
+	while (i < length / 2)
 	{
-		swap(&s[i], &s[s_length-i-1]);
+		swap(s + i, s + length - i - 1);
+		i++;
 	}
 }
