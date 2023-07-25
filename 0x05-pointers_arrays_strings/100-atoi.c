@@ -25,7 +25,7 @@ int _atoi(char *s)
 	{
 		if (is_number(*s))
 		{
-			num = i * (*s - '0');
+			num += i * (*s - '0');
 			i = (num == 0) ? 1 : i * 10;
 		}
 	}
