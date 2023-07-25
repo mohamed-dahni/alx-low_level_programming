@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 /**
  * is_number - checks if a character is a number
  * @c: character to be evaluated
@@ -31,11 +29,4 @@ int _atoi(char *s)
 		s++;
 	}
 	return num;
-}
-
-int main()
-{
-	char *s = "123";
-	printf("%d\n", _atoi(s));
-	return 0;
 }
