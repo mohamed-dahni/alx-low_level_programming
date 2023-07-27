@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * _strcat - concatenates two strings
- * @dest: string to append to
- * @src: string to append
- * Return: pointer to dest
+ * string_toupper - changes all lowercase letters of a string to uppercase
+ * @s: string to change
+ * Return: pointer to string
  */
 char *string_toupper(char *s)
 {
