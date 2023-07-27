@@ -1,22 +1,32 @@
 #include "main.h"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * cap_string - capitalizes all words of a string
+ * @s: string to capitalize
+ * Return: pointer to s
  */
-char *leet(char *s)
+char *cap_string(char *s)
 {
 	int i, j;
-	char *letters = "aAeEoOtTlL";
-	char *numbers = "4433007711";
+	char sep[] = " \t\n,;.!?\"(){}";
 
 	for (i = 0; *(s + i); i++)
 	{
-		for (j = 0; *(letters + j); j++)
+		if (*(s + i) >= 'a' && *(s + i) <= 'z')
 		{
-			if (*(s + i) == *(letters + j))
-				*(s + i) = *(numbers + j);
+			if (i == 0)
+				*(s + i) -= 32;
+			else
+			{
+				for (j = 0; sep[j]; j++)
+				{
+					if (*(s + i - 1) == sep[j])
+					{
+						*(s + i) -= 32;
+						break;
+					}
+				}
+			}
 		}
 	}
 	return (s);
