@@ -8,7 +8,7 @@
  * @c: the character to initialize the arry
  * Reture: array
 */
-int create_array(unsigned int size, char c)
+char *create_array(unsigned int size, char c)
 {
     if (size <= 0) return NULL;
 
