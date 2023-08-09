@@ -16,7 +16,7 @@ char *str_concat(char *s1, char *s2)
 		s2_size = 0;
 
 	if (s1 == NULL && s2 == NULL)
-		return (NULL);
+		return ("");
 
 	while (s1 && s1[s1_size])
 		s1_size++;
