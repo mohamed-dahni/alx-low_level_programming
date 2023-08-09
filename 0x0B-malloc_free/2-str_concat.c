@@ -36,10 +36,3 @@ char *str_concat(char *s1, char *s2)
 
 	return (new_str);
 }
-
-int main()
-{
-	char *str = str_concat("Hello", NULL);
-	printf("%s", str);
-	return 0;
-}
