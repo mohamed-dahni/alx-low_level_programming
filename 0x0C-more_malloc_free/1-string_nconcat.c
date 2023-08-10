@@ -11,7 +11,8 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *str = NULL;
-	unsigned int s1len = 0,
+	unsigned int
+		s1len = 0,
 		s2len = 0,
 		i     = 0,
 		j     = 0;
@@ -34,7 +35,19 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		i++;
 	}
 	while (j < n)
-		str[i++] = s2[j++];
+	{
+		str[i] = s2[j];
+		i++;
+		j++;
+	}
+	str[i] = '\0';
 
 	return (str);
+}
+
+int main()
+{
+	char * str = string_nconcat("hello ", "world", 2);
+	printf("%s\n", str);
+	return 0;
 }
