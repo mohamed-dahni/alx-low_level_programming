@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
  * string_nconcat - contatenates two strings
@@ -43,11 +42,4 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	str[i] = '\0';
 
 	return (str);
-}
-
-int main()
-{
-	char * str = string_nconcat("hello ", "world", 2);
-	printf("%s\n", str);
-	return 0;
 }
