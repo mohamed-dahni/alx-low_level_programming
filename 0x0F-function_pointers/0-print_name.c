@@ -1,4 +1,5 @@
 #include "function_pointers.h"
+#include <stdlib.h>
 
 /**
  * print_name - print the return value of f function
@@ -9,7 +10,7 @@
 void print_name(char *name, void (*f)(char *))
 {
 	if (!name || !f)
-		return;
+		exit(1);
 
 	f(name);
 }
