@@ -1,4 +1,4 @@
-#include "function_pointers.h";
+#include "function_pointers.h"
 
 /**
  * print_name - print the return value of f function
