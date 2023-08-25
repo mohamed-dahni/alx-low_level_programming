@@ -1,3 +1,4 @@
+#include <stddef.h>
 #include "lists.h"
 
 /**
@@ -5,7 +6,6 @@
  * @h: the head of the singly linked list
  * Return: How many elements in a singly linked list
  */
-
 size_t list_len(const list_t *h)
 {
 	if (h == NULL)
@@ -13,4 +13,3 @@ size_t list_len(const list_t *h)
 
 	return (list_len(h->next) + 1);
 }
-
