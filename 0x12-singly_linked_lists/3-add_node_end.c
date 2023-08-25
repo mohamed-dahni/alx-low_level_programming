@@ -6,9 +6,9 @@
  * @str: the value of the node
  * Return: the address of the newly created node
  */
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new = NULL, aux = *head;
+	list_t *new = NULL, *aux = *head;
 
 	if (head == NULL || *head == NULL)
 		return (0);
@@ -17,7 +17,7 @@ list_t *add_node(list_t **head, const char *str)
 	if (new == NULL)
 		return (NULL);
 
-	new->str = strdupt(str);
+	new->str = strdup(str);
 	new->next = NULL;
 
     while (aux->next != NULL)
