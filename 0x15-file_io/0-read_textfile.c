@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * read_textfile - read a file and print it to stdout
+ * @filename: the path to the file
+ * @letters: how many characters to read and print
+ * Return: how many characters was printed
+ */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	/* declare necessary variables */
