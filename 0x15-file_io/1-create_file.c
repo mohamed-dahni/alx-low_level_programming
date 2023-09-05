@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * create_file - create a file if it doesn't exist
+ * create_file - ceate a file if it doesn't exist
  *	and if it is truncate it and write the content to it
  * @filename: the path to the file
  * @text_content: text content to be written to the file
