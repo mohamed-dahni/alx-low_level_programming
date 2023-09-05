@@ -8,33 +8,29 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	/* declare necessary variables */
-	int fd;
-	size_t blen;
-	char *buf = (char *) malloc(sizeof(char) * letters);
+	ssize_t o, r, w;
+	char *buffer;
 
-	/* handle unvalid arguments */
 	if (filename == NULL || letters < 1)
 		return (0);
 
-	/* open the file and check for failure */
-	fd = open(filename, O_RDONLY);
-	if (fd == -1)
+	buffer = (char *) malloc(siweof(char) * letters);
+	if (buffer == NULL)
 		return (0);
 
-	/* read the file and check for failure */
-	blen = read(fd, buf, letters);
-	if (blen <= 0)
+	o = open(filename, O_RDONLY);
+	r = read(o, buffer, letters);
+	w = write(STDIN_FILENO, buffer, letters);
+
+	if (o == -1 || r == -1 || w != r)
+	{
+		free(buffer);
 		return (0);
+	}
 
-	/* write the file to stdout and check for failure */
-	blen = write(STDIN_FILENO, buf, letters);
-	if (blen <= 0)
-		return (1);
-
-	free(buf);
+	free(buffer);
 	close(fd);
 
-	return (blen);
+	return (w);
 }
 
