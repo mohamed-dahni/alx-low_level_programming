@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * create_file - create a file if it doesn't exist 
+ * create_file - create a file if it doesn't exist
  *	and if it is truncate it and write the content to it
  * @filename: the path to the file
  * @text_content: text content to be written to the file
@@ -9,7 +9,7 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int o, w, len;
+	int o, w, len = 0;
 
 	if (filename == NULL || text_content == NULL)
 		return (-1);
